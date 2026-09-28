@@ -1,23 +1,26 @@
 # Md. Mominul Haque (Pabel)
 
-Product manager for a 400-branch microfinance ERP (2024–2026), and designer-builder of the
-analytics and workflow systems around it. Python · Django · pandas · Power BI · Dhaka, Bangladesh.
+**Product manager, microfinance ERP and digital transformation · Dhaka, Bangladesh**
 
-Two kinds of work sit on this profile, and they should be read differently:
+From 2024 to 2026 I carried the product function for the core banking platform of a
+400-branch microfinance institution, and I built the analytical and operational systems
+that platform needed but did not have. The two halves of that work call for different
+skills, and this profile keeps them distinct so that each can be judged on its own terms.
 
-- **Product-managed, vendor-built.** Microzen, the core banking ERP of Padakhep Manabik
-  Unnayan Kendra (PMUK): 4,000+ staff, 600,000+ clients, 400+ branches. I wrote the
-  requirements the vendor built from, ran the backlog and UAT, and aligned Operations,
-  Finance, Risk and ICT. I did not write its code.
-- **Designed and built.** The systems around the ERP that had no vendor and no budget:
-  target allocation, the Business Pulse dashboard, weekly-file reconciliation, mobile-wallet
-  onboarding, ERP automation, NID reconciliation, and the analytics practice underneath
-  them. I wrote these, with an AI-assisted, human-gated pipeline.
+| | Microzen ERP: product management | The systems around it: design and build |
+|---|---|---|
+| **Scale** | 4,000+ staff · 600,000+ clients · 400+ branches | 2,600 field officers · 736 branch offices · a 730,000-row weekly file |
+| **My work** | Requirements discovery, eight BRDs and an API contract, user stories and process maps, vendor backlog and release sign-off, UAT, stakeholder alignment across Operations, Finance, Risk and ICT | Architecture, data model, code, tests and rollout for target allocation, the Business Pulse dashboard, weekly-file reconciliation, mobile-wallet onboarding, ERP automation and NID reconciliation, on an AI-assisted, human-gated pipeline |
+| **Delivered by** | Analyzen Bangladesh Ltd., to specification | Me, with no vendor and no budget |
+| **Evidence** | Specifications, scenario suites, governance records | Repositories, tests, release tags, live adoption |
 
-Case studies with before/after, numbers and the rule each system refuses to break:
-**[pabel64.github.io/portfolio](https://pabel64.github.io/portfolio/)**.
-Most code is private because it ran against organisational data; walkthroughs, architecture
-documents and dummy-data demos are available on request.
+Underneath both sits a three-year analytics practice: 73 analyses in seven programmes,
+answering the regulator, finance, programme heads and donors from one monthly export.
+
+Case studies with the problem, the before-and-after, the numbers and the rule each system
+refuses to break: **[pabel64.github.io/portfolio](https://pabel64.github.io/portfolio/)**.
+Code is private because it ran against organisational data; walkthroughs, architecture
+documents and dummy-data demonstrations are available on request.
 
 ---
 
@@ -57,10 +60,12 @@ because it exposes no API for that data.
 
 ---
 
-## Microzen: the core ERP I product-managed
+## Microzen: the core ERP, product-managed
 
-Microzen is PMUK's core banking system, built and maintained by an external vendor. From
-August 2024 to 2026 I owned its requirements on the organisation's side.
+Microzen is the core banking system of Padakhep Manabik Unnayan Kendra (PMUK), delivered
+and maintained by Analyzen Bangladesh Ltd. From August 2024 to 2026 I held the product
+function on the organisation's side: what gets built, in what order, to what standard, and
+whether it is accepted.
 
 | What | Detail |
 |---|---|
@@ -83,7 +88,7 @@ good enough, and a fund-requisition review tracking 16 year-one workstreams agai
 
 LEAP (Padakhep Life Enhancement Program) is the enterprise wing's sales platform: members buy
 products against their loans, and field staff earn incentives on the collections that follow.
-I managed its enhancement and designed the integration contract with the core ERP.
+I managed its enhancement roadmap and authored the integration contract with the core ERP.
 
 **Six REST/JSON APIs, specified October 2025:**
 
@@ -105,7 +110,7 @@ and branch names are harmonised across both systems so records join cleanly.
 
 ---
 
-## Designed and built
+## Systems designed and built
 
 | System | One line | Number | Status | Code |
 |---|---|---|---|---|
