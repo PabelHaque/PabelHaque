@@ -18,7 +18,7 @@ Underneath both sits a three-year analytics practice: 73 analyses in seven progr
 answering the regulator, finance, programme heads and donors from one monthly export.
 
 Case studies with the problem, the before-and-after, the numbers and the rule each system
-refuses to break: **[pabel64.github.io/portfolio](https://pabel64.github.io/portfolio/)**.
+refuses to break: **[pabelhaque.github.io/portfolio](https://pabelhaque.github.io/portfolio/)**.
 Code is private because it ran against organisational data; walkthroughs, architecture
 documents and dummy-data demonstrations are available on request.
 
@@ -114,13 +114,13 @@ and branch names are harmonised across both systems so records join cleanly.
 
 | System | One line | Number | Status | Code |
 |---|---|---|---|---|
-| Field-Staff Target System | Splits each branch target across its officers by a weighted formula so the parts sum exactly to the whole, with a full audit trail | ~18,000 weekly targets for 2,600 officers in 409 branches | Weekly process live since July 2026 | `PMUK-Target-System` (private) · [case study](https://pabel64.github.io/portfolio/projects/pmuk-target-system.html) |
-| Business Pulse dashboard | Weekly target vs achievement, rolled up officer → division, each manager sees only their own units | 568 branch offices, 27,122 samities loaded; 488 backend tests | In weekly use since July 2026 | `AK47-Dashboard` (private) · [case study](https://pabel64.github.io/portfolio/projects/ak47-dashboard.html) |
-| SaiMarz | Offline desktop tool that joins two 730,000-row weekly workbooks and reports duplicate-key conflicts VLOOKUP hides | 46 seconds, was a crash-prone 30 minutes | In weekly use | `saimarz` (private) · [case study](https://pabel64.github.io/portfolio/projects/saimarz.html) |
+| Field-Staff Target System | Splits each branch target across its officers by a weighted formula so the parts sum exactly to the whole, with a full audit trail | ~18,000 weekly targets for 2,600 officers in 409 branches | Weekly process live since July 2026 | `PMUK-Target-System` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/pmuk-target-system.html) |
+| Business Pulse dashboard | Weekly target vs achievement, rolled up officer → division, each manager sees only their own units | 568 branch offices, 27,122 samities loaded; 488 backend tests | In weekly use since July 2026 | `AK47-Dashboard` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/ak47-dashboard.html) |
+| SaiMarz | Offline desktop tool that joins two 730,000-row weekly workbooks and reports duplicate-key conflicts VLOOKUP hides | 46 seconds, was a crash-prone 30 minutes | In weekly use | `saimarz` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/saimarz.html) |
 | MFS Branch Wallet portal | bKash / Nagad merchant-wallet onboarding for branch offices with a maker-checker workflow and generated provider packs | 731 branch users · 189 registrations · median 0.8-day verification | Live since June 2026 | Not published · walkthrough on request |
 | ERP automation suite | Three tools on one browser-automation layer: transfer-eligibility checks, a concession register mined from WhatsApp, a rebate pipeline from email to verified SMS list | 257 applications across 141 branches; 4 ineligible rebates caught | Single-operator tools | `transfer-automation` · `padakhep-rebate-automation` · `special-rebate-automation` (private) |
-| NID → KYC reconciliation | Reads the NID card barcode first, OCR as fallback, resolves the member by NID then name + date of birth, and queues mismatches for review | 4 of 5 stages built | Active | `document-extraction-engine` (private) · [case study](https://pabel64.github.io/portfolio/projects/document-extraction-engine.html) |
-| Reports and Analytics | 27 months of regulator, finance and donor questions answered from one monthly export, consolidated onto a shared library that defines each number once | 73 analyses in 7 programmes | Practice, 2023–2026 | `reports-and-analytics` (private) · [case study](https://pabel64.github.io/portfolio/projects/reports-and-analytics.html) |
+| NID → KYC reconciliation | Reads the NID card barcode first, OCR as fallback, resolves the member by NID then name + date of birth, and queues mismatches for review | 4 of 5 stages built | Active | `document-extraction-engine` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/document-extraction-engine.html) |
+| Reports and Analytics | 27 months of regulator, finance and donor questions answered from one monthly export, consolidated onto a shared library that defines each number once | 73 analyses in 7 programmes | Practice, 2023–2026 | `reports-and-analytics` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/reports-and-analytics.html) |
 
 ---
 
@@ -130,7 +130,7 @@ A gated, AI-assisted delivery pipeline of my own: 71 specialist agents, 38 stage
 human approval gates (clarify, requirement, mockup, pull request), with artefact verification
 no agent can fake and an adversarial critic that blocks work for being merely correct. It built
 the target system, the dashboard and the study platform. Repository: `factory-agent-overlay`
-(private) · [case study](https://pabel64.github.io/portfolio/projects/factory-agent-overlay.html).
+(private) · [case study](https://pabelhaque.github.io/portfolio/projects/factory-agent-overlay.html).
 
 Design habits that show up in every system above: the parts must sum to the whole; unknown
 stays unknown rather than guessed; nothing is auto-approved or auto-sent; every decision leaves
@@ -141,4 +141,4 @@ an audit row; Bengali text and leading-zero identifiers are handled on purpose.
 ## Contact
 
 mdmominul97haque@gmail.com · [LinkedIn](https://www.linkedin.com/in/md-mominul-haque) ·
-[Portfolio](https://pabel64.github.io/portfolio/)
+[Portfolio](https://pabelhaque.github.io/portfolio/)
