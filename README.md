@@ -12,7 +12,7 @@ skills, and this profile keeps them distinct so that each can be judged on its o
 | **Scale** | 4,000+ staff · 600,000+ clients · 400+ branches · loan portfolio above BDT 37 billion | 2,600 field officers · 400+ branch offices · 50+ recurring reports automated |
 | **My work** | Requirements discovery, 14+ BRDs, four PRDs and an API contract, end-to-end member lifecycle mapping aligned with the IGACAIR credit-rating model, vendor backlog and UAT, CCAC committee coordination, stakeholder alignment across Operations, Finance, Risk and ICT | Architecture, data model, code, tests and rollout for target allocation, the MF Plan Tracker dashboard, weekly-file reconciliation, mobile-wallet onboarding, ERP automation and NID reconciliation, on an AI-assisted, human-gated pipeline |
 | **Delivered by** | Analyzen Bangladesh Ltd., to specification | Me, with no vendor and no budget |
-| **Evidence** | Specifications, scenario suites, governance records | Repositories, tests, release tags, live adoption |
+| **Evidence** | Specifications, scenario suites, governance records | Repositories, case studies, working simulations, live adoption |
 
 Underneath both sits a three-year analytics practice: 50+ recurring regulator, finance, management
 and donor reports automated from one monthly export, built as 73 analysis notebooks in seven programmes,
@@ -37,7 +37,7 @@ flowchart TB
     end
 
     subgraph BUILT["Designed and built"]
-        CM["Weekly CM report<br/>730,000 rows × 95 cols"]
+        CM["Weekly CM report<br/>the full loan book, one export"]
         SM["SaiMarz<br/>joins this week to last in under 5 minutes"]
         TS["Field-Staff Target System<br/>weekly targets for 2,600 officers"]
         BP["MF Plan Tracker dashboard<br/>target vs achievement, role-scoped"]
@@ -72,7 +72,7 @@ whether it is accepted.
 | What | Detail |
 |---|---|
 | Microzen 1.0, the legacy system | Diagnosed and resolved the issues underlying the legacy ERP, ran the enhancement backlog and UAT with the vendor, kept Operations, Finance, Risk and ICT aligned on priorities; 450+ support cases resolved in the first year |
-| Microzen 2.0 requirements | 14+ BRDs and four PRDs form the build specification for the rebuild, positioned as a multi-tenant SaaS for other MFIs. I authored eight of them: system administration, member lifecycle, loan processing, risk monitoring, incident management, MRA/PKSF regulatory reporting and loan classification |
+| Microzen 2.0 requirements | 14+ BRDs and four PRDs form the build specification for the rebuild, designed so other MFIs could adopt it. I authored eight of them: system administration, member lifecycle, loan processing, risk monitoring, incident management, MRA/PKSF regulatory reporting and loan classification |
 | Amortised loans | Specified declining-balance loan servicing through a 50-scenario suite worked out with the team; rolled out across 400+ branches from September 2025 |
 | IGACAIR and the member lifecycle | Mapped the end-to-end member lifecycle and aligned it with IGACAIR, the organisation's credit-rating model, so both are implemented consistently in 2.0 |
 | Digital KYC | Drove field adoption; removed paper re-entry from member onboarding |
