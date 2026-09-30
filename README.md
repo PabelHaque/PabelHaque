@@ -72,18 +72,14 @@ whether it is accepted.
 | What | Detail |
 |---|---|
 | Microzen 1.0, the legacy system | Diagnosed and resolved the issues underlying the legacy ERP, ran the enhancement backlog and UAT with the vendor, kept Operations, Finance, Risk and ICT aligned on priorities; 450+ support cases resolved in the first year |
-| Microzen 2.0 requirements | 14+ BRDs and four PRDs form the build specification for the rebuild, positioned as a multi-tenant SaaS for other MFIs. The eight I authored: system administration and geo hierarchy · member lifecycle management · micro and ME loan processing (nine-level approval chain) · business strategy and risk monitoring (red flags, SLA ladder, BI-driven sampling) · incident and impact management (disaster lifecycle with a weighted branch risk score) · MRA/PKSF replica reporting (approval-gated external reporting with NFRs) · system-admin addendum (samity types, campaign waivers, cheque control, loan classification, bulk product assignment) |
-| Amortised loans | Specified declining-balance loan servicing through a 50-scenario suite worked out with the team (grace period, early payment, missed instalments, early closure, bullet repayment, holiday shifts); rolled out across 400+ branches from September 2025 |
+| Microzen 2.0 requirements | 14+ BRDs and four PRDs form the build specification for the rebuild, positioned as a multi-tenant SaaS for other MFIs. I authored eight of them: system administration, member lifecycle, loan processing, risk monitoring, incident management, MRA/PKSF regulatory reporting and loan classification |
+| Amortised loans | Specified declining-balance loan servicing through a 50-scenario suite worked out with the team; rolled out across 400+ branches from September 2025 |
 | IGACAIR and the member lifecycle | Mapped the end-to-end member lifecycle and aligned it with IGACAIR, the organisation's credit-rating model, so both are implemented consistently in 2.0 |
 | Digital KYC | Drove field adoption; removed paper re-entry from member onboarding |
-| Governed rollback | Designed the correction path Microzen 1.0 lacked: ICT-only execution, two-tier approval, scoped to specific transactions on a specific date, immutable rollback log |
-| Business Pulse metrics | Specified the operations metric set (OTR, PAR, CR, DR, savings, staff productivity, MRA classification) with drill-down from organisation to individual credit officer |
-| Governance | Organise and coordinate the Central Coordination Automation Committee (CCAC), where BRDs and PRDs are approved and vendors selected, and keep its members and top management aligned with the digitalisation programme; departmental requests from eight sub-committees become BRDs through this path |
+| Governed rollback | Designed the governed correction path Microzen 1.0 lacked: two-tier approval, scoped to specific transactions, immutable log |
+| Business Pulse metrics | Specified the operations metric set (PAR, OTR, collections, savings, staff productivity) with drill-down from organisation to individual officer |
+| Governance | Organise and coordinate the Central Coordination Automation Committee (CCAC), where BRDs and PRDs are approved and vendors selected, keeping its members and top management aligned with the digitalisation programme |
 
-What this work looks like: a BRD with numbered business rules and non-functional requirements
-the vendor is held to (for example, 30-second report generation for 200 branches, 99.5% uptime
-in business hours, WCAG 2.1 AA on the external portal), a gap analysis when a draft was not
-good enough.
 
 ---
 
@@ -93,10 +89,13 @@ LEAP (Padakhep Life Enhancement Program) is the enterprise wing's sales platform
 products against their loans, and field staff earn incentives on the collections that follow.
 I managed its enhancement roadmap and authored the integration contract with the core ERP.
 
-**Six REST/JSON APIs, specified October 2025:**
+Six REST/JSON APIs, specified in October 2025, link the two systems: member lookup, loan
+verification before a sale, sales confirmation, collection data per loan and in bulk, and
+employee mapping. Two rules they enforce: no product can be sold against a loan that has not
+been disbursed, and staff incentives are computed from verified collections, not from
+self-reported sales.
 
-| API | Direction | What it enforces |
-|---|---|---|
+---|---|---|
 | Member information | LEAP → Microzen | Auto-fill name, mobile and NID from the member ID; no retyping at the point of sale |
 | Loan verification before sale | LEAP → Microzen | A "check disbursement status" step; **no product can be sold against a loan that has not been disbursed** |
 | Sales confirmation | LEAP → Microzen | Each sale recorded against its loan and the staff member who made it |
@@ -118,21 +117,20 @@ and branch names are harmonised across both systems so records join cleanly.
 | System | One line | Number | Status | Code |
 |---|---|---|---|---|
 | Field-Staff Target System | Splits each branch target across its officers by a weighted formula so the parts sum exactly to the whole, with a full audit trail | About 18,000 weekly targets for 2,600 officers in 400+ branches | Weekly process live since July 2026 | `PMUK-Target-System` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/pmuk-target-system.html) · [**try the simulation**](https://pabelhaque.github.io/portfolio/demos/PMUK_Field_Staff_Target_System/PMUK_Field_Staff_Target_System.html) |
-| MF Plan Tracker dashboard | Weekly target vs achievement, rolled up officer → division, each manager sees only their own units | Weekly targets and achievements for 2,600 officers; 488 backend tests | In weekly use since July 2026 | `AK47-Dashboard` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/ak47-dashboard.html) |
-| SaiMarz | Offline desktop tool that replaces VLOOKUP for large Excel files: joins any two workbooks on a shared key, reports the duplicate and unmatched keys VLOOKUP hides, keeps leading zeros, combines many workbooks on one key, converts Excel to CSV and splits output by branch or division, with a provenance sheet in every file | Under 5 minutes per merge, was 20–30 minutes and a frozen laptop | In weekly use by the team | `saimarz` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/saimarz.html) · [**try the simulation**](https://pabelhaque.github.io/portfolio/demos/SaiMarz/SaiMarz.html) |
+| MF Plan Tracker dashboard | Weekly target vs achievement, rolled up officer → division, each manager sees only their own units | Weekly targets and achievements for 2,600 officers | In weekly use since July 2026 | `AK47-Dashboard` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/ak47-dashboard.html) |
+| SaiMarz | Offline desktop tool that replaces VLOOKUP for large Excel files: joins any two workbooks on a shared key, flags duplicate and unmatched keys, keeps leading zeros; also combines files, converts Excel to CSV and splits output by branch | Under 5 minutes per merge, was 20–30 minutes and a frozen laptop | In weekly use by the team | `saimarz` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/saimarz.html) · [**try the simulation**](https://pabelhaque.github.io/portfolio/demos/SaiMarz/SaiMarz.html) |
 | MFS Branch Wallet portal | bKash / Nagad / Upay merchant-wallet onboarding for 400+ branch offices with a 13-state maker-checker workflow and generated provider packs | 750+ branch users · 194 registrations · 57 provider batches · median 0.8-day verification | Live since June 2026 | Not published · [case study](https://pabelhaque.github.io/portfolio/projects/mfs-branch-wallet.html) · [**try the simulation**](https://pabelhaque.github.io/portfolio/demos/MFS_Branch_Wallet_Portal/MFS_Branch_Wallet_Portal.html) |
 | ERP automation suite | Three tools on one browser-automation layer: transfer-eligibility checks, a concession register mined from WhatsApp, a rebate pipeline from email to verified SMS list | 257 applications across 141 branches; every rebate validated against the ERP before the SMS list | Single-operator tools | `transfer-automation` · `padakhep-rebate-automation` · `special-rebate-automation` (private) · simulations: [transfers](https://pabelhaque.github.io/portfolio/demos/Transfer_Eligibility_Control_Tower/Transfer_Eligibility_Control_Tower.html) · [permissions](https://pabelhaque.github.io/portfolio/demos/Special_Permission_Register/Special_Permission_Register.html) · [rebates](https://pabelhaque.github.io/portfolio/demos/Special_Rebate_Automation/Special_Rebate_Automation.html) |
 | NID → KYC reconciliation | Reads the NID card barcode first, OCR as fallback, resolves the member by NID then name + date of birth, and queues mismatches for review | 4 of 5 stages built | Under review at head office for rollout | `document-extraction-engine` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/document-extraction-engine.html) · [**try the simulation**](https://pabelhaque.github.io/portfolio/demos/Document_Extraction_Engine/Document_Extraction_Engine.html) |
-| Reports and Analytics | 50+ recurring regulator (MRA, PKSF), finance, management and donor reports automated from one monthly export, work of days per cycle now run in minutes, on a shared library that defines each number once | 73 analysis notebooks in 7 programmes | Practice, 2023–2026 | `reports-and-analytics` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/reports-and-analytics.html) |
+| Reports and Analytics | 50+ recurring regulator (MRA, PKSF), finance, management and donor reports automated from one monthly export; work of days per cycle now runs in minutes | 73 analysis notebooks in 7 programmes | Practice, 2023–2026 | `reports-and-analytics` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/reports-and-analytics.html) |
 
 ---
 
 ## How I build
 
 A gated, AI-assisted delivery pipeline of my own: 71 specialist agents, 38 stages and four
-human approval gates (clarify, requirement, mockup, pull request), with artefact verification
-no agent can fake and an adversarial critic that blocks work for being merely correct. It built
-the target system, the dashboard and the study platform. Repository: `factory-agent-overlay`
+human approval gates, with artefact verification and an adversarial review step. It built the
+target system, the dashboard and the study platform. Repository: `factory-agent-overlay`
 (private) · [case study](https://pabelhaque.github.io/portfolio/projects/factory-agent-overlay.html).
 
 Design habits that show up in every system above: the parts must sum to the whole; unknown
