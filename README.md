@@ -95,21 +95,6 @@ employee mapping. Two rules they enforce: no product can be sold against a loan 
 been disbursed, and staff incentives are computed from verified collections, not from
 self-reported sales.
 
----|---|---|
-| Member information | LEAP → Microzen | Auto-fill name, mobile and NID from the member ID; no retyping at the point of sale |
-| Loan verification before sale | LEAP → Microzen | A "check disbursement status" step; **no product can be sold against a loan that has not been disbursed** |
-| Sales confirmation | LEAP → Microzen | Each sale recorded against its loan and the staff member who made it |
-| Collection data, per loan | LEAP → Microzen, quarterly | Percentage collected per staff member with overdue and tenure flags, so incentives are computed from verified repayment, not from self-reported sales |
-| Collection data, bulk | LEAP → Microzen, quarterly | The same for all loans at once |
-| Employee information | LEAP → Microzen | Branch, area and zone mapping for attribution |
-
-Business rules in the contract: excluded income-generating-activity types, overdue and
-active-tenure flags, retroactive incentive when a member regularises, and incentive credited
-to the staff member who achieves the regularisation. A later pre-disbursement check runs the
-other way: Microzen asks LEAP whether ordered products were received at the branch before a
-loan is disbursed. Also settled: a product's price may not exceed 10% of the approved loan,
-and branch names are harmonised across both systems so records join cleanly.
-
 ---
 
 ## Systems designed and built
