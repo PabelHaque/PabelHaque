@@ -83,7 +83,7 @@ whether it is accepted.
 What this work looks like: a BRD with numbered business rules and non-functional requirements
 the vendor is held to (for example, 30-second report generation for 200 branches, 99.5% uptime
 in business hours, WCAG 2.1 AA on the external portal), a gap analysis when a draft was not
-good enough, and a fund-requisition review tracking 16 year-one workstreams against plan.
+good enough.
 
 ---
 
