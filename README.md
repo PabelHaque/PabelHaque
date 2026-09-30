@@ -10,7 +10,7 @@ skills, and this profile keeps them distinct so that each can be judged on its o
 | | Microzen ERP: product management | The systems around it: design and build |
 |---|---|---|
 | **Scale** | 4,000+ staff · 600,000+ clients · 400+ branches | 2,600 field officers · 736 branch offices · a 730,000-row weekly file |
-| **My work** | Requirements discovery, eight BRDs and an API contract, user stories and process maps, vendor backlog and release sign-off, UAT, stakeholder alignment across Operations, Finance, Risk and ICT | Architecture, data model, code, tests and rollout for target allocation, the Business Pulse dashboard, weekly-file reconciliation, mobile-wallet onboarding, ERP automation and NID reconciliation, on an AI-assisted, human-gated pipeline |
+| **My work** | Requirements discovery, eight BRDs and an API contract, user stories and process maps, vendor backlog and release sign-off, UAT, stakeholder alignment across Operations, Finance, Risk and ICT | Architecture, data model, code, tests and rollout for target allocation, the MF Plan Tracker dashboard, weekly-file reconciliation, mobile-wallet onboarding, ERP automation and NID reconciliation, on an AI-assisted, human-gated pipeline |
 | **Delivered by** | Analyzen Bangladesh Ltd., to specification | Me, with no vendor and no budget |
 | **Evidence** | Specifications, scenario suites, governance records | Repositories, tests, release tags, live adoption |
 
@@ -39,7 +39,7 @@ flowchart TB
         CM["Weekly CM report<br/>730,000 rows × 95 cols"]
         SM["SaiMarz<br/>joins this week to last in 46 s"]
         TS["Field-Staff Target System<br/>weekly targets for 2,600 officers"]
-        BP["Business Pulse dashboard<br/>target vs achievement, role-scoped"]
+        BP["MF Plan Tracker dashboard<br/>target vs achievement, role-scoped"]
         MFS["MFS Branch Wallet portal<br/>736 branch offices · bKash / Nagad"]
         AUTO["ERP automation suite<br/>transfers · concessions · rebates"]
         NID["NID → KYC reconciliation"]
@@ -75,7 +75,7 @@ whether it is accepted.
 | Amortised loans | Specified declining-balance loan servicing through eight borrower scenarios (grace period, early payment, missed instalments, early closure, bullet repayment, holiday shifts); rolled out across 395 branches from September 2025 |
 | Digital KYC | Drove field adoption; removed paper re-entry from member onboarding |
 | Governed rollback | Designed the correction path Microzen 1.0 lacked: ICT-only execution, two-tier approval, scoped to specific transactions on a specific date, immutable rollback log |
-| Business Pulse metrics | Specified the operations metric set (OTR, PAR, CR, DR, savings, staff productivity, MRA classification) with drill-down from organisation to individual credit officer, later implemented in-house as the Business Pulse dashboard |
+| Business Pulse metrics | Specified the operations metric set (OTR, PAR, CR, DR, savings, staff productivity, MRA classification) with drill-down from organisation to individual credit officer |
 | Governance | Worked inside the organisation's automation governance: an executive advisory committee, a coordination committee and eight departmental sub-committees; departmental requests became BRDs through this path |
 
 What this work looks like: a BRD with numbered business rules and non-functional requirements
@@ -116,7 +116,7 @@ and branch names are harmonised across both systems so records join cleanly.
 | System | One line | Number | Status | Code |
 |---|---|---|---|---|
 | Field-Staff Target System | Splits each branch target across its officers by a weighted formula so the parts sum exactly to the whole, with a full audit trail | ~18,000 weekly targets for 2,600 officers in 409 branches | Weekly process live since July 2026 | `PMUK-Target-System` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/pmuk-target-system.html) · [**try the simulation**](https://pabelhaque.github.io/portfolio/demos/PMUK_Field_Staff_Target_System/PMUK_Field_Staff_Target_System.html) |
-| Business Pulse dashboard | Weekly target vs achievement, rolled up officer → division, each manager sees only their own units | 568 branch offices, 27,122 samities loaded; 488 backend tests | In weekly use since July 2026 | `AK47-Dashboard` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/ak47-dashboard.html) |
+| MF Plan Tracker dashboard | Weekly target vs achievement, rolled up officer → division, each manager sees only their own units | 568 branch offices, 27,122 samities loaded; 488 backend tests | In weekly use since July 2026 | `AK47-Dashboard` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/ak47-dashboard.html) |
 | SaiMarz | Offline desktop tool that joins two 730,000-row weekly workbooks and reports duplicate-key conflicts VLOOKUP hides | 46 seconds, was a crash-prone 30 minutes | In weekly use | `saimarz` (private) · [case study](https://pabelhaque.github.io/portfolio/projects/saimarz.html) · [**try the simulation**](https://pabelhaque.github.io/portfolio/demos/SaiMarz/SaiMarz.html) |
 | MFS Branch Wallet portal | bKash / Nagad merchant-wallet onboarding for branch offices with a maker-checker workflow and generated provider packs | 731 branch users · 189 registrations · median 0.8-day verification | Live since June 2026 | Not published · [**try the simulation**](https://pabelhaque.github.io/portfolio/demos/MFS_Branch_Wallet_Portal/MFS_Branch_Wallet_Portal.html) |
 | ERP automation suite | Three tools on one browser-automation layer: transfer-eligibility checks, a concession register mined from WhatsApp, a rebate pipeline from email to verified SMS list | 257 applications across 141 branches; 4 ineligible rebates caught | Single-operator tools | `transfer-automation` · `padakhep-rebate-automation` · `special-rebate-automation` (private) · simulations: [transfers](https://pabelhaque.github.io/portfolio/demos/Transfer_Eligibility_Control_Tower/Transfer_Eligibility_Control_Tower.html) · [permissions](https://pabelhaque.github.io/portfolio/demos/Special_Permission_Register/Special_Permission_Register.html) · [rebates](https://pabelhaque.github.io/portfolio/demos/Special_Rebate_Automation/Special_Rebate_Automation.html) |
