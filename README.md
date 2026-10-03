@@ -3,15 +3,15 @@
 **Product manager, microfinance ERP and digital transformation · Dhaka, Bangladesh**
 
 From 2024 to 2026 I carried the product function for the core banking platform of a
-400-branch microfinance institution, and I built the analytical and operational systems
-that platform needed but did not have. The two halves of that work call for different
+400-branch microfinance institution, and with my team I designed and built the analytical and
+operational systems around it. The two halves of that work call for different
 skills, and this profile keeps them distinct so that each can be judged on its own terms.
 
 | | Microzen ERP: product management | The systems around it: design and build |
 |---|---|---|
 | **Scale** | 4,000+ staff · 600,000+ clients · 400+ branches · loan portfolio above BDT 37 billion | 2,600 field officers · 400+ branch offices · 50+ recurring reports automated |
 | **My work** | Requirements discovery, 14+ BRDs, four PRDs and an API contract, end-to-end member lifecycle mapping aligned with the IGACAIR credit-rating model, vendor backlog and UAT, CCAC committee coordination, stakeholder alignment across Operations, Finance, Risk and ICT | Architecture, data model, code, tests and rollout for target allocation, the MF Plan Tracker dashboard, weekly-file reconciliation, mobile-wallet onboarding, ERP automation and NID reconciliation, on an AI-assisted, human-gated pipeline |
-| **Delivered by** | Analyzen Bangladesh Ltd., to specification | Me, with no vendor and no budget |
+| **Delivered by** | Analyzen Bangladesh Ltd., to specification | Me and my team, in-house |
 | **Evidence** | Specifications, scenario suites, governance records | Repositories, case studies, working simulations, live adoption |
 
 Underneath both sits a three-year analytics practice: 50+ recurring regulator, finance, management
